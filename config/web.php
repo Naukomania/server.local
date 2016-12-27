@@ -46,7 +46,12 @@ $config = [
             'enableStrictParsing' => true,
             'showScriptName' => false,
             'rules' => [
+                '' => 'site',
                 ['class' => 'yii\rest\UrlRule', 'controller' => 'film'],
+                '<controller>/<action>' => '<controller>/<action>',
+                '<controller>' => '<controller>/index',
+                '<controller>/<id:\d+>/<action:(create|update|delete)>' => '<controller>/<action>',
+                '<controller>/<id:\d+>' => '<controller>/view',
             ],
         ],
     ],
