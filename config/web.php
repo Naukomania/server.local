@@ -47,7 +47,7 @@ $config = [
             'showScriptName' => false,
             'rules' => [
                 '' => 'site',
-                ['class' => 'yii\rest\UrlRule', 'controller' => 'film'],
+                ['class' => 'yii\rest\UrlRule', 'controller' => ['film','node','widget']],
                 '<controller>/<action>' => '<controller>/<action>',
                 '<controller>' => '<controller>/index',
                 '<controller>/<id:\d+>/<action:(create|update|delete)>' => '<controller>/<action>',
